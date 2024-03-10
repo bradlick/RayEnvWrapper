@@ -28,19 +28,19 @@ class WrapperRayVecEnv(VecEnv):
         self.remote.stop()
 
     def get_attr(self, attr_name: str, indices: VecEnvIndices = None) -> List[Any]:
-        pass
+        raise NotImplementedError()
 
     def set_attr(self, attr_name: str, value: Any, indices: VecEnvIndices = None) -> None:
-        pass
+        raise NotImplementedError()
 
     def env_method(self, method_name: str, *method_args, indices: VecEnvIndices = None, **method_kwargs) -> List[Any]:
-        pass
+        raise NotImplementedError()
 
     def env_is_wrapped(self, wrapper_class: Type[gym.Wrapper], indices: VecEnvIndices = None) -> List[bool]:
-        pass
+        raise NotImplementedError()
 
     def get_images(self) -> Sequence[np.ndarray]:
-        pass
+        raise NotImplementedError()
 
     def seed(self, seed: Optional[int] = None) -> List[Union[None, int]]:
-        pass
+        raise NotImplementedError()
